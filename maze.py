@@ -77,11 +77,7 @@ class Maze:
         c = ''
         for y in range(self.height):
             for x in range(self.width):
-                if self.maze_map[x][y] == Maze.WALL:
-                    c = '#'
-                else:
-                    c = ' '
-                print(c, end="")
+                print('#' if self.maze_map[x][y] == Maze.WALL else ' ', end="")
             print("")
 
 m = Maze(WIDTH, HEIGHT)
